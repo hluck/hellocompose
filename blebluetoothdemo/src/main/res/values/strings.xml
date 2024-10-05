@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BLEBluetoothDemo</string>
+    <string name="location_permission_required">请求位置权限</string>
+    <string name="location_permission_rationale">自安卓6.0开始，需要定位权限才能搜索到BLE设备</string>
+    <string name="location_permission_denied">定位权限被拒绝</string>
+    <string name="bluetooth_permission_required">请求附近蓝牙设备权限</string>
+    <string name="bluetooth_permission_rationale">
+        从Android 12开始，系统要求应用程序获得“附近设备”访问权限，才能扫描并连接到BLE设备。
+    </string>
+
+    <string name="please_grant_relevant_permissions">请授予所需权限</string>
+    <string name="app_settings_rationale">
+        先前对所需权限的请求已被反复或永久拒绝。你需要在应用程序的设置界面中手动授予应用程序这些权限。
+    </string>
+    <string name="cannot_launch_app_settings">
+        无法启动应用程序设置，请手动导航到应用程序设置
+    </string>
+    <string name="app_settings">应用设置</string>
+    <string name="quit">退出</string>
+    <string name="disconnected">断开</string>
+    <string name="disconnected_or_unable_to_connect_to_device">
+        已断开连接或无法连接到%1$s.
+    </string>
+    <string name="ok">OK</string>
+</resources>

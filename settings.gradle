@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "HelloCompose"
+include ':app'
+include ':basiclayoutsdemo'
+include ':basicstatedemo'
+include ':migrationcompose'
+include ':composefortvsample'
+include ':blebluetoothdemo'
+include ':bottomnavigationdemo'
+include ':firstcomposeapp'
+include ':lazylistdemo'
+include ':bottomnavigationdemo2'
+include ':effecthandle'
+include ':animationbasic'
+include ':canvasbasic'
+include ':bankuidemo'

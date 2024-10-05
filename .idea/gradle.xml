@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animationbasic" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bankuidemo" />
+            <option value="$PROJECT_DIR$/basiclayoutsdemo" />
+            <option value="$PROJECT_DIR$/basicstatedemo" />
+            <option value="$PROJECT_DIR$/blebluetoothdemo" />
+            <option value="$PROJECT_DIR$/bottomnavigationdemo" />
+            <option value="$PROJECT_DIR$/bottomnavigationdemo2" />
+            <option value="$PROJECT_DIR$/canvasbasic" />
+            <option value="$PROJECT_DIR$/composefortvsample" />
+            <option value="$PROJECT_DIR$/effecthandle" />
+            <option value="$PROJECT_DIR$/firstcomposeapp" />
+            <option value="$PROJECT_DIR$/lazylistdemo" />
+            <option value="$PROJECT_DIR$/migrationcompose" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
