@@ -186,7 +186,6 @@ val currencies = listOf(
 fun HomeScreen(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier.fillMaxSize()
-            .systemBarsPadding()
     ) {
         Column {
             TopContentComponent()

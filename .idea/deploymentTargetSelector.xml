@@ -44,19 +44,30 @@
       <SelectionState runConfigName="bankuidemo">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="IdCardComponent">
+      <SelectionState runConfigName="movieinfo">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-10-09T15:02:48.585067800Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="Default" identifier="serial=emulator-5554;connection=ad743d50" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="MediaMainScreen">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="HomeScreen">
+      <SelectionState runConfigName="ShouldShowMediaHomeScreenSectionOrShimmer">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="BankUiDemoNavGraph">
+      <SelectionState runConfigName="MediaItem">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="WalletScreen">
+      <SelectionState runConfigName="MediaDetailsScreen">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="CustomComponentPreview">
+      <SelectionState runConfigName="SimilarMediaListScreen">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

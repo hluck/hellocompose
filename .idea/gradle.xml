@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$/firstcomposeapp" />
             <option value="$PROJECT_DIR$/lazylistdemo" />
             <option value="$PROJECT_DIR$/migrationcompose" />
+            <option value="$PROJECT_DIR$/movieinfo" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
