@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animates" />
             <option value="$PROJECT_DIR$/animationbasic" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bankuidemo" />
@@ -18,12 +19,31 @@
             <option value="$PROJECT_DIR$/bottomnavigationdemo" />
             <option value="$PROJECT_DIR$/bottomnavigationdemo2" />
             <option value="$PROJECT_DIR$/canvasbasic" />
+            <option value="$PROJECT_DIR$/composebasicui" />
             <option value="$PROJECT_DIR$/composefortvsample" />
+            <option value="$PROJECT_DIR$/constraintlayoutcompose" />
+            <option value="$PROJECT_DIR$/datastorebasic" />
             <option value="$PROJECT_DIR$/effecthandle" />
+            <option value="$PROJECT_DIR$/expensetracking" />
             <option value="$PROJECT_DIR$/firstcomposeapp" />
+            <option value="$PROJECT_DIR$/fowdemo" />
             <option value="$PROJECT_DIR$/lazylistdemo" />
             <option value="$PROJECT_DIR$/migrationcompose" />
+            <option value="$PROJECT_DIR$/migrationxml" />
             <option value="$PROJECT_DIR$/movieinfo" />
+            <option value="$PROJECT_DIR$/myquotes" />
+            <option value="$PROJECT_DIR$/navigationdemo" />
+            <option value="$PROJECT_DIR$/pagerdemo" />
+            <option value="$PROJECT_DIR$/playmusicdemo" />
+            <option value="$PROJECT_DIR$/retrofitdemo" />
+            <option value="$PROJECT_DIR$/roomdemo" />
+            <option value="$PROJECT_DIR$/statedemo" />
+            <option value="$PROJECT_DIR$/stylingtext" />
+            <option value="$PROJECT_DIR$/supportmutiscreen" />
+            <option value="$PROJECT_DIR$/testdemo" />
+            <option value="$PROJECT_DIR$/useviewmodel" />
+            <option value="$PROJECT_DIR$/voicetotext" />
+            <option value="$PROJECT_DIR$/wanandroid" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
