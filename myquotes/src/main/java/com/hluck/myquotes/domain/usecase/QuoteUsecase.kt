@@ -11,7 +11,7 @@ class QuoteUseCase @Inject constructor(
     private val quoteRepository: QuoteRepository
 ) {
     operator fun invoke():Flow<List<Quote>> = flow {
-        quoteRepository.getAllQuotes()?.let {
+        quoteRepository.getAllQuotes().let {
             if (it.isSuccessful){
                 it.body()?.quotes?.let { it1 -> emit(it1) }
             }

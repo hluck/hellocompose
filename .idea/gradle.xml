@@ -18,11 +18,14 @@
             <option value="$PROJECT_DIR$/blebluetoothdemo" />
             <option value="$PROJECT_DIR$/bottomnavigationdemo" />
             <option value="$PROJECT_DIR$/bottomnavigationdemo2" />
+            <option value="$PROJECT_DIR$/camarademo" />
+            <option value="$PROJECT_DIR$/camaraxproject" />
             <option value="$PROJECT_DIR$/canvasbasic" />
             <option value="$PROJECT_DIR$/composebasicui" />
             <option value="$PROJECT_DIR$/composefortvsample" />
             <option value="$PROJECT_DIR$/constraintlayoutcompose" />
             <option value="$PROJECT_DIR$/datastorebasic" />
+            <option value="$PROJECT_DIR$/downloadfile" />
             <option value="$PROJECT_DIR$/effecthandle" />
             <option value="$PROJECT_DIR$/expensetracking" />
             <option value="$PROJECT_DIR$/firstcomposeapp" />
@@ -33,10 +36,12 @@
             <option value="$PROJECT_DIR$/movieinfo" />
             <option value="$PROJECT_DIR$/myquotes" />
             <option value="$PROJECT_DIR$/navigationdemo" />
+            <option value="$PROJECT_DIR$/nestednavigation" />
             <option value="$PROJECT_DIR$/pagerdemo" />
             <option value="$PROJECT_DIR$/playmusicdemo" />
             <option value="$PROJECT_DIR$/retrofitdemo" />
             <option value="$PROJECT_DIR$/roomdemo" />
+            <option value="$PROJECT_DIR$/simpleanimation" />
             <option value="$PROJECT_DIR$/statedemo" />
             <option value="$PROJECT_DIR$/stylingtext" />
             <option value="$PROJECT_DIR$/supportmutiscreen" />

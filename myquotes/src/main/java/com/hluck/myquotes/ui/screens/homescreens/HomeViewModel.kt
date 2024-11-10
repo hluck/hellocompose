@@ -23,7 +23,6 @@ class HomeViewModel @Inject constructor(
     var quoteFlow = MutableStateFlow<NetworkUIState<HomeScreenModel>>(NetworkUIState.LOADING())
         private set
 
-
     init {
         getAllQuotes()
     }
