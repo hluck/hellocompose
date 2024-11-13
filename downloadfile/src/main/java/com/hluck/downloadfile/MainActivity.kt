@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
@@ -41,6 +43,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 //        viewModel.downloadFile("Apple.jpg")
+        val urls = listOf("Apple.jpg","Watermelons.jpg")
         setContent {
             HelloComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -49,13 +52,35 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ){
-                        DownloadProgressComponent(
-                            viewModel
-                        )
-                        Button({
-                            viewModel.downloadFile()
-                        }) {
-                            Text(text = "点我下载")
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Button({
+                                viewModel.downloadFile()
+                            }) {
+                                Text(text = "点我下载")
+                            }
+                            DownloadProgressComponent(
+                                viewModel,
+                                urls[0]
+                            )
+                        }
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Button({
+                                viewModel.downloadFile(urls[1])
+                            }) {
+                                Text(text = "点我下载")
+                            }
+                            DownloadProgressComponent(
+                                viewModel,
+                                urls[1]
+                            )
                         }
 
                     }

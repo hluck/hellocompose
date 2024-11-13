@@ -34,9 +34,11 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DownloadProgressComponent(
-    viewModel: DownloadViewModel
+    viewModel: DownloadViewModel,
+    url:String
 ) {
-    val sliderPosition by viewModel.progressState.collectAsStateWithLifecycle()
+//    val sliderPosition by viewModel.progressState.collectAsStateWithLifecycle()
+    val sliderPosition by viewModel.getProgressState(url).collectAsStateWithLifecycle()
     val interactionSource = remember { MutableInteractionSource() }
     val trackHeight = 4.dp
     val thumbSize = DpSize(20.dp, 20.dp)

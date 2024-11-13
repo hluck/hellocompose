@@ -4,6 +4,7 @@ import android.content.ContentResolver.MimeTypeInfo
 import android.net.Uri
 import android.webkit.MimeTypeMap
 import com.hluck.downloadfile.data.RetrofitInstance
+import com.hluck.downloadfile.ui.logd
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
@@ -77,6 +78,7 @@ class DownloadRepository {
             val name = config.saveByFileName()
             val fileName = if(!name.isNullOrBlank()) name else "${System.currentTimeMillis()}.${MimeTypeMap.getSingleton().getExtensionFromMimeType(contentType)}"
             val file = File("${context.filesDir}",fileName)
+            file.absolutePath.logd()
             return DownloadInfo(FileOutputStream(file),file)
         }
     }

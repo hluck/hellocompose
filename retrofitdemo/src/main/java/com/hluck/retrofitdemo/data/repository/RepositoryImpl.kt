@@ -1,5 +1,6 @@
 package com.hluck.retrofitdemo.data.repository
 
+import android.content.pm.ApplicationInfo
 import com.hluck.retrofitdemo.data.Result
 import com.hluck.retrofitdemo.data.api.Api
 import com.hluck.retrofitdemo.data.models.ProductX
