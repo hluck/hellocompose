@@ -1,6 +1,12 @@
 package com.hluck.downloadfile
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -20,13 +26,18 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.hluck.downloadfile.common.utils.FileUtil
 import com.hluck.downloadfile.download.DownloadRepository
 import com.hluck.downloadfile.ui.DownloadProgressComponent
 import com.hluck.downloadfile.ui.DownloadViewModel
+import com.hluck.downloadfile.ui.logd
 import com.hluck.downloadfile.ui.theme.HelloComposeTheme
+import java.io.File
 
+const val REQUEST_CODE_INSTALL_PERMISSION = 1
 class MainActivity : ComponentActivity() {
 
     private val viewModel by viewModels<DownloadViewModel>(
@@ -43,7 +54,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 //        viewModel.downloadFile("Apple.jpg")
-        val urls = listOf("Apple.jpg","Watermelons.jpg")
+        val urls = listOf("app-release.apk","Apple.jpg","Watermelons.jpg")
+        "isRoot: ${FileUtil.isRoot()}".logd()
         setContent {
             HelloComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -58,7 +70,7 @@ class MainActivity : ComponentActivity() {
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Button({
-                                viewModel.downloadFile()
+                                viewModel.downloadFile(urls[0])
                             }) {
                                 Text(text = "点我下载")
                             }
@@ -88,4 +100,7 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+
+
 }

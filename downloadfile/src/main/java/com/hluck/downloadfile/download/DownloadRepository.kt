@@ -71,7 +71,8 @@ class DownloadRepository {
         val uri = config.saveByUri(contentType)
         if (config.saveByFile() != null) {
             val file = config.saveByFile()
-            return DownloadInfo(FileOutputStream(file), file)
+            return DownloadInfo(
+                FileOutputStream(file), file)
         } else if (uri != null){
             return DownloadInfo(context.contentResolver.openOutputStream(uri),uri = uri)
         } else {
