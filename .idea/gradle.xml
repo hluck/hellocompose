@@ -4,7 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
         <option name="modules">
@@ -25,6 +24,7 @@
             <option value="$PROJECT_DIR$/checknet" />
             <option value="$PROJECT_DIR$/composebasicui" />
             <option value="$PROJECT_DIR$/composefortvsample" />
+            <option value="$PROJECT_DIR$/composewindow" />
             <option value="$PROJECT_DIR$/constraintlayoutcompose" />
             <option value="$PROJECT_DIR$/datastorebasic" />
             <option value="$PROJECT_DIR$/downloadfile" />
@@ -32,6 +32,7 @@
             <option value="$PROJECT_DIR$/expensetracking" />
             <option value="$PROJECT_DIR$/firstcomposeapp" />
             <option value="$PROJECT_DIR$/fowdemo" />
+            <option value="$PROJECT_DIR$/helloglance" />
             <option value="$PROJECT_DIR$/lazylistdemo" />
             <option value="$PROJECT_DIR$/migrationcompose" />
             <option value="$PROJECT_DIR$/migrationxml" />
