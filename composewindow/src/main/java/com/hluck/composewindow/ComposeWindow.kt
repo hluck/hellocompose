@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Recomposer
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,6 +25,11 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.lifecycle.setViewTreeViewModelStoreOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
@@ -48,6 +54,8 @@ object ComposeWindow {
 
         composeView = ComposeView(context).apply {
             setContent {
+
+                val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.loading))
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -58,7 +66,11 @@ object ComposeWindow {
                     contentAlignment = Alignment.Center
                 ) {
                     Row {
-                        CircularProgressIndicator()
+                        LottieAnimation(
+                            composition,
+                            iterations = LottieConstants.IterateForever
+                        )
+//                        CircularProgressIndicator()
                     }
                 }
             }
