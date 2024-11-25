@@ -51,35 +51,17 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.light(Color.Transparent.copy(0.1f).toArgb(),Color.Transparent.copy(0.1f).toArgb()),
+            statusBarStyle = SystemBarStyle.light(Color.Transparent.toArgb(),Color.Transparent.copy(0.1f).toArgb()),
         )
         setContent {
             HelloComposeTheme {
-
-            }
-            BasicAlertDialog(
-                {},
-                properties = DialogProperties(
-                    usePlatformDefaultWidth = true
-                ),
-                modifier = Modifier.fillMaxSize()
-            ) {
-                Button(
-                    {
-                    },
-                ) {
-                    Text("change")
+                Box(Modifier.fillMaxSize()){
+                    Text("Hello glance")
                 }
             }
 
+
         }
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-
 }

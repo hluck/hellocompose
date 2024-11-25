@@ -4,12 +4,14 @@ import android.app.Activity
 import android.content.Context
 import android.graphics.PixelFormat
 import android.view.View
+import android.view.WindowContentFrameStats
 import android.view.WindowManager
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Recomposer
@@ -21,6 +23,8 @@ import androidx.compose.ui.platform.AbstractComposeView
 import androidx.compose.ui.platform.AndroidUiDispatcher
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.compositionContext
+import androidx.compose.ui.unit.dp
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.lifecycle.setViewTreeViewModelStoreOwner
@@ -41,20 +45,19 @@ object ComposeWindow {
     fun showWindow(context: Context) {
         val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         // 隐藏状态栏
-        val activity = WeakReference<Activity>(context as Activity)
-        activity.get()?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        MainActivity.getWindow()?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         val params = WindowManager.LayoutParams(
             WindowManager.LayoutParams.MATCH_PARENT,
             WindowManager.LayoutParams.MATCH_PARENT,
 //            WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
             WindowManager.LayoutParams.TYPE_APPLICATION_ATTACHED_DIALOG,
-            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+            or WindowManager.LayoutParams.FLAG_FULLSCREEN,
             PixelFormat.TRANSLUCENT
         )
 
         composeView = ComposeView(context).apply {
             setContent {
-
                 val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.loading))
                 Box(
                     modifier = Modifier
@@ -99,6 +102,10 @@ object ComposeWindow {
 
 
     fun dismissWindow(context: Context) {
+
+        // 显示状态栏
+        MainActivity.getWindow()?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
+
         val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         lifecycleOwner?.onDestroy()
         windowManager.removeViewImmediate(composeView)
