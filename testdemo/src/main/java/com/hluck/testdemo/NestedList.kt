@@ -67,14 +67,14 @@ fun NestedList(modifier: Modifier = Modifier) {
                         kotlin.math.abs(horizontalMove) > kotlin.math.abs(verticalMove) -> {
                             scrollDirection = "Horizontal"
                             scope.launch {
-                                horizontalScrollState.scrollTo(horizontalScrollState.value + horizontalMove.toInt())
+                                horizontalScrollState.scrollTo(horizontalScrollState.value - horizontalMove.toInt())
                             }
                         }
                         // 垂直滑动的距离大于水平滑动的距离，认为是上下滑动
                         kotlin.math.abs(verticalMove) > kotlin.math.abs(horizontalMove) -> {
                             scrollDirection = "Vertical"
                             scope.launch {
-                                verticalScrollState.scrollTo(verticalScrollState.value + verticalMove.toInt())
+                                verticalScrollState.scrollTo(verticalScrollState.value - verticalMove.toInt())
                             }
                         }
 
