@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/composefortvsample" />
             <option value="$PROJECT_DIR$/composewindow" />
             <option value="$PROJECT_DIR$/constraintlayoutcompose" />
+            <option value="$PROJECT_DIR$/customtopbar" />
             <option value="$PROJECT_DIR$/datastorebasic" />
             <option value="$PROJECT_DIR$/downloadfile" />
             <option value="$PROJECT_DIR$/effecthandle" />
@@ -49,6 +50,7 @@
             <option value="$PROJECT_DIR$/statedemo" />
             <option value="$PROJECT_DIR$/stylingtext" />
             <option value="$PROJECT_DIR$/supportmutiscreen" />
+            <option value="$PROJECT_DIR$/tabwidthpage" />
             <option value="$PROJECT_DIR$/testdemo" />
             <option value="$PROJECT_DIR$/useviewmodel" />
             <option value="$PROJECT_DIR$/voicetotext" />
