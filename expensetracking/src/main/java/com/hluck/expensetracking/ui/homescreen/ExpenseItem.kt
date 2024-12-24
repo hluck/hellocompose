@@ -72,11 +72,17 @@ fun DayLabelComponent(modifier: Modifier = Modifier) {
 fun ExpenseDetailComponent(
     appNavController: NavController
 ) {
-
     Row(
         modifier = Modifier
             .clickable {
-                appNavController.navigate(AppNav.DETAIL.name)
+                appNavController.navigate(
+                    AppNav.DETAIL.name
+                ){
+                    launchSingleTop = true
+                    popUpTo(AppNav.DETAIL.name){
+                        inclusive = true
+                    }
+                }
             }
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.secondaryContainer)

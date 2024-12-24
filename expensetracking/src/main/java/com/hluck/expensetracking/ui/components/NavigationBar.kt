@@ -63,11 +63,21 @@ fun NavigationBarWithOnlySelectedLabels(
                     when(index){
                         0 -> {
                             mainViewModel.toggleVisibility(true)
-                            bottomNavController.navigate(BottomNav.HOME.name)
+                            bottomNavController.navigate(BottomNav.HOME.name){
+                                launchSingleTop = true
+                                popUpTo(BottomNav.HOME.name){
+                                    inclusive = true
+                                }
+                            }
                         }
                         1 -> {
                             mainViewModel.toggleVisibility(false)
-                            bottomNavController.navigate(BottomNav.RANKING.name)
+                            bottomNavController.navigate(BottomNav.RANKING.name){
+                                launchSingleTop = true
+                                popUpTo(BottomNav.RANKING.name){
+                                    inclusive = true
+                                }
+                            }
                         }
                     }
                 },

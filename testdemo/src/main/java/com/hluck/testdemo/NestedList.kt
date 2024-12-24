@@ -54,8 +54,8 @@ fun NestedList(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .horizontalScroll(horizontalScrollState) // 左右滑动
-            .verticalScroll(verticalScrollState) // 上下滑动
+            .horizontalScroll(horizontalScrollState)
+            .verticalScroll(verticalScrollState)
             .pointerInput(Unit) {
                 detectTransformGestures { _, pan, zoom, rotation ->
                     val horizontalMove = pan.x
@@ -65,7 +65,7 @@ fun NestedList(modifier: Modifier = Modifier) {
                     when {
                         // 水平滑动的距离大于垂直滑动的距离，认为是左右滑动
                         kotlin.math.abs(horizontalMove) > kotlin.math.abs(verticalMove) -> {
-                            scrollDirection = "Horizontal"
+                            scrollDirection = "Horizontal :${horizontalMove}"
                             scope.launch {
                                 horizontalScrollState.scrollTo(horizontalScrollState.value - horizontalMove.toInt())
                             }

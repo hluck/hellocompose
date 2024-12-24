@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/animates" />
+            <option value="$PROJECT_DIR$/animateselectitem" />
             <option value="$PROJECT_DIR$/animationbasic" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bankuidemo" />

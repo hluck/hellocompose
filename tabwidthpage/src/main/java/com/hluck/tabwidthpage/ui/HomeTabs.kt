@@ -21,6 +21,7 @@ import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
@@ -45,7 +46,6 @@ fun MainScreen() {
     val selectedIndex = pagerSate.currentPage
 
     Log.d("TAG","selectedIndex: ${selectedIndex},")
-
     Scaffold(
         topBar =
         {
